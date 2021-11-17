@@ -19,28 +19,34 @@ def greeting(name):
 # return true if the number is odd and false if it is not. An odd number is a
 # number which, when divided by 2, has a remainder of 1 or -1.
 def is_odd(number):
-    pass
+    if number % 2 == 1:
+        return True
+    else: return False 
 
 # ------------------------------------------------------------------------------
 # 5. Create a function called `is_even` that, given a number, will
 # return true if the number is even and false if it is not. An even number is a
 # number which, when divided by 2, has a remainder of 0.
 def is_even(number):
-    pass
+    if number % 2 == 0:
+        return True
+    else: return False 
 
 # ------------------------------------------------------------------------------
 # 6. Create a function called `fahrenheit_to_celsius` that takes a
 # Fahrenheit temperature as an argument and returns the
 # temperature in Celsius.
-def fahrenheit_to_celsius(temp):
-    pass
+def fahrenheit_to_celsius(tempf):
+    tempc = (tempf - 32) * (5/9)
+    return tempc
 
 # ------------------------------------------------------------------------------
 # 7. Create a function called `celsius_to_fahrenheit` that takes a
 # Celsius temperature as an argument and returns the
 # temperature in Fahrenheit.
-def celsius_to_fahrenheit(temp):
-    pass
+def celsius_to_fahrenheit(tempc):
+    tempf = tempc * (9/5) +32
+    return tempf
 
 # ------------------------------------------------------------------------------
 # 8. Create a function called `fahrenheit_to_kelvin` that takes a
@@ -50,10 +56,15 @@ def celsius_to_fahrenheit(temp):
 # Absolute zero (0 K) is equivalent to −273.15 C.
 # 1 degree Kelvin equals 1 degree Celsius.
 
-def fahrenheit_to_kelvin(temp):
+def fahrenheit_to_kelvin(tempf):
     #must use fahrenheit_to_celsius
+    def fahrenheit_to_kelvin(tempf):
+        tempc = fahrenheit_to_celsius(tempf)
+        print (tempc)
+        tempk = tempc - 273.15
+        return tempk
     #should return temp in Kelvin
-    pass
+    
 
 # ------------------------------------------------------------------------------
 # 9. Create a function called `lesser` that takes two numbers as
@@ -61,7 +72,12 @@ def fahrenheit_to_kelvin(temp):
 # use an if/else statement.
 
 def lesser(num1, num2):
-    pass
+    if num1 > num2:
+        return num2
+    else: 
+        return num1
+
+
 
 # ------------------------------------------------------------------------------
 # 10. Create a function called `multigreeting` that takes a name
