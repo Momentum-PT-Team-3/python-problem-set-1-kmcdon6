@@ -58,10 +58,8 @@ def celsius_to_fahrenheit(tempc):
 
 def fahrenheit_to_kelvin(tempf):
     #must use fahrenheit_to_celsius
-    def fahrenheit_to_kelvin(tempf):
         tempc = fahrenheit_to_celsius(tempf)
-        print (tempc)
-        tempk = tempc - 273.15
+        tempk = float(tempc + 273.15)
         return tempk
     #should return temp in Kelvin
     
@@ -92,7 +90,15 @@ def lesser(num1, num2):
 #
 # If any other language code is used, return nothing.
 def multigreeting(name, lang):
-    pass
+
+    if lang == "en":
+        return "Hello," + " " + name + "!"
+    elif lang == "es":
+        return "¡Hola," + " " + name + "!"
+    elif lang == "fr":
+        return "Bonjour," + " " + name + "!"
+    elif lang == "eo":
+        return "Saluton," + " " + name + "!"
 
 # ------------------------------------------------------------------------------
 # 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
@@ -122,4 +128,19 @@ def multigreeting(name, lang):
 # Write a function called `gcd` that takes two arguments and returns the greatest
 # common divisor using the instructions above.
 def gcd(a,b):
-    pass
+    d = 0
+    while (a%2 ==0 & b%2 ==0):
+        a = a/2
+        b = b/2
+        d = d + 1
+    while (a != b):
+        if a%2 ==0:
+            a = a/2
+        elif b%2 ==0:
+            b = b/2
+        elif a > b:
+            a = (a-b)/2
+        else:
+            b = (b-a)/2
+    g = a
+    return g * 2**d
