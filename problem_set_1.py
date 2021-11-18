@@ -129,7 +129,7 @@ def multigreeting(name, lang):
 # common divisor using the instructions above.
 def gcd(a,b):
     d = 0
-    while (a%2 ==0 & b%2 ==0):
+    while (a%2 ==0 and b%2 ==0):
         a = a/2
         b = b/2
         d = d + 1
